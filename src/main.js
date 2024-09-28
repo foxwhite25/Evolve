@@ -1045,7 +1045,7 @@ function fastLoop(){
         breakdown.p[global.race.species] = {};
     }
 
-    var time_multiplier = 0.25;
+    var time_multiplier = 4;
 
     if (global.race.species === 'protoplasm'){
         // Early Evolution Game
