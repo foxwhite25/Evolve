@@ -173,7 +173,7 @@ export function loopTimers(){
     // Mid loop takes 1000ms without any modifiers.
     const baseMidTimer = 4 * webWorkerMainTimer;
     // Long loop (game day) takes 5000ms without any modifiers.
-    const baseLongTimer = 20 * webWorkerMainTimer;
+    const baseLongTimer = 20 * webWorkerMainTimer / 32;
     // The constant by which the time is accelerated when atrack.t > 0.
     const timeAccelerationFactor = 2;
 

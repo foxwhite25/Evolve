@@ -721,19 +721,13 @@ if (window.Worker){
         var data = e.data;
         switch (data) {
             case 'fast':
-                for (let i = 0; i < 16; i++) {
-                    fastLoop();
-                }
+                fastLoop();
                 break;
             case 'mid':
-                for (let i = 0; i < 16; i++) {
-                    midLoop();
-                }
+                midLoop();
                 break;
             case 'long':
-                for (let i = 0; i < 16; i++) {
-                    longLoop();
-                }
+                longLoop();
                 break;
         }
     }, false);
@@ -1051,7 +1045,7 @@ function fastLoop(){
         breakdown.p[global.race.species] = {};
     }
 
-    var time_multiplier = 0.25;
+    var time_multiplier = 16;
 
     if (global.race.species === 'protoplasm'){
         // Early Evolution Game
