@@ -1045,7 +1045,7 @@ function fastLoop(){
         breakdown.p[global.race.species] = {};
     }
 
-    var time_multiplier = 16;
+    var time_multiplier = 8;
 
     if (global.race.species === 'protoplasm'){
         // Early Evolution Game
@@ -9915,6 +9915,7 @@ function midLoop(){
                     progress += mechRating(mech,false);
                 }
             }
+            progress *= 16;
 
             if (global.portal.hasOwnProperty('waygate') && global.tech.hasOwnProperty('waygate') && global.portal.waygate.on === 1 && global.tech.waygate >= 2 && global.portal.waygate.progress < 100){
                 global.portal.waygate.progress += progress;
