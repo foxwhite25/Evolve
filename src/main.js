@@ -9541,14 +9541,16 @@ function midLoop(){
         }
         for (let i=0; i<espEnd; i++){
             if (global.civic.foreign[`gov${i}`].trn > 0){
-                global.civic.foreign[`gov${i}`].trn-=16;
-                if (global.civic.foreign[`gov${i}`].trn === 0){
-                    global.civic.foreign[`gov${i}`].spy+=16;
+                global.civic.foreign[`gov${i}`].trn -= 16;
+                if (global.civic.foreign[`gov${i}`].trn <= 0){
+                    global.civic.foreign[`gov${i}`].trn = 0;
+                    global.civic.foreign[`gov${i}`].spy++;
                 }
             }
             if (global.civic.foreign[`gov${i}`].sab > 0){
-                global.civic.foreign[`gov${i}`].sab-=16;
-                if (global.civic.foreign[`gov${i}`].sab === 0){
+                global.civic.foreign[`gov${i}`].sab -= 16;
+                if (global.civic.foreign[`gov${i}`].sab <= 0){
+                    global.civic.foreign[`gov${i}`].sab = 0;
                     switch (global.civic.foreign[`gov${i}`].act){
                         case 'influence':
                             if (Math.floor(seededRandom(0,4 + spyCatchMod)) === 0){
