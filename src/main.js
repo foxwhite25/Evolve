@@ -3578,13 +3578,16 @@ function fastLoop(){
         // Fortress Repair
         if (global.portal['fortress'] && global.portal.fortress.walls < 100){
             if (modRes('Stone', -(200 * time_multiplier))){
-                global.portal.fortress.repair++;
+                global.portal.fortress.repair += 16;
                 breakdown.p.consume.Stone[loc('portal_fortress_name')] = -200;
             }
             if (global.portal.fortress.repair >= actions.portal.prtl_fortress.info.repair()){
                 global.portal.fortress.repair = 0;
-                global.portal.fortress.walls++;
+                global.portal.fortress.walls += 16;
             }
+        }
+        if (global.portal.fortress.walls > 100) {
+            global.portal.fortress.walls = 100
         }
 
         // Energy Recharge
