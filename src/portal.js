@@ -2679,7 +2679,6 @@ export function bloodwar(){
             killed += terminated;
             if (siege > 0){
                 damage++;
-                global.portal.fortress.walls--;
                 if (global.portal.fortress.walls === 0){
                     siege_report.destroyed = true;
                     destroyed = true;
