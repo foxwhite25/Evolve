@@ -2407,8 +2407,6 @@ function casualties(demons,pat_armor,ambush,report){
         }
         report.wounded = wounded;
         report.died = dead;
-        global.civic.garrison.wounded += wounded;
-        global.civic.garrison.workers -= dead;
         global.stats.died += dead;
     }
     return dead;
