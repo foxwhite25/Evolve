@@ -3586,7 +3586,7 @@ function fastLoop(){
                 global.portal.fortress.walls += 16;
             }
         }
-        if (global.portal.fortress.walls > 100) {
+        if (global.portal['fortress'] && global.portal.fortress.walls > 100) {
             global.portal.fortress.walls = 100
         }
 
