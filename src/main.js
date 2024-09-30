@@ -9541,13 +9541,13 @@ function midLoop(){
         }
         for (let i=0; i<espEnd; i++){
             if (global.civic.foreign[`gov${i}`].trn > 0){
-                global.civic.foreign[`gov${i}`].trn--;
+                global.civic.foreign[`gov${i}`].trn-=16;
                 if (global.civic.foreign[`gov${i}`].trn === 0){
-                    global.civic.foreign[`gov${i}`].spy++;
+                    global.civic.foreign[`gov${i}`].spy+=16;
                 }
             }
             if (global.civic.foreign[`gov${i}`].sab > 0){
-                global.civic.foreign[`gov${i}`].sab--;
+                global.civic.foreign[`gov${i}`].sab-=16;
                 if (global.civic.foreign[`gov${i}`].sab === 0){
                     switch (global.civic.foreign[`gov${i}`].act){
                         case 'influence':
@@ -9996,7 +9996,7 @@ function midLoop(){
                 if(global.portal['dish_soul_steeper'] && global.portal['dish_soul_steeper'].on && global.portal['spire']){
                     progress *= 1 + (0.05 * global.portal['spire'].count * global.portal['dish_soul_steeper'].on);
                 }
-                global.portal['devilish_dish'].done += progress;
+                global.portal['devilish_dish'].done += progress * 16;
                 global.portal['devilish_dish'].done = Math.min(global.portal['devilish_dish'].done, 100);
                 global.portal['devilish_dish'].count = Math.floor(global.portal['devilish_dish'].done);
                 if(global.portal['devilish_dish'].done >= 0.05 && global.tech['dish'] === 3){
