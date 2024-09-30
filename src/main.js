@@ -1965,7 +1965,10 @@ function fastLoop(){
         if (global.space['m_relay']){
             if (p_on['m_relay']){
                 if (global.space.m_relay.charged < 10000){
-                    global.space.m_relay.charged++;
+                    global.space.m_relay.charged+=16;
+                }
+                if (global.space.m_relay.charged > 10000){
+                    global.space.m_relay.charged = 10000
                 }
             }
             else {
