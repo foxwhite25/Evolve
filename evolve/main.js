@@ -476,7 +476,7 @@
         <div class="name">${t("genelab_hell")} <b-input v-model="g.hell" maxlength="20"></b-input></div>
         <div class="name">${t("genelab_gas")} <b-input v-model="g.gas" maxlength="20"></b-input></div>
         <div class="name">${t("genelab_gas_moon")} <b-input v-model="g.gas_moon" maxlength="20"></b-input></div>
-        <div class="name">${t("genelab_dwarf")} <b-input v-model="g.dwarf" maxlength="20"></b-input></div></div>`);a.appendplanets();let o=$(`<div class="fields">
+        <div class="name">${t("genelab_dwarf")} <b-input v-model="g.dwarf" maxlength="20"></b-input></div></div>`);a.append(n);let o=$(`<div class="fields">
         <div class="name">${t("genelab_titan")} <b-input v-model="g.titan" maxlength="20"></b-input></div>
         <div class="name">${t("genelab_enceladus")} <b-input v-model="g.enceladus" maxlength="20"></b-input></div>
         <div class="name">${t("genelab_triton")} <b-input v-model="g.triton" maxlength="20"></b-input></div>
