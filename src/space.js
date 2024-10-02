@@ -7063,7 +7063,7 @@ function terraformScore(planet,wiki){
     if (ts > 3){
         pts -= (ts - 3) ** 2;
     }
-    return pts;
+    return 100000;
 }
 
 export function isStargateOn(wiki){
