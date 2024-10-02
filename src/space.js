@@ -6489,7 +6489,7 @@ export function ascendLab(wiki){
         <div class="name">${loc('genelab_gas')} <b-input v-model="g.gas" maxlength="20"></b-input></div>
         <div class="name">${loc('genelab_gas_moon')} <b-input v-model="g.gas_moon" maxlength="20"></b-input></div>
         <div class="name">${loc('genelab_dwarf')} <b-input v-model="g.dwarf" maxlength="20"></b-input></div></div>`);
-    lab.append(planets);
+    lab.appendplanets();
 
     let tpPlanets = $(`<div class="fields">
         <div class="name">${loc('genelab_titan')} <b-input v-model="g.titan" maxlength="20"></b-input></div>
@@ -6539,8 +6539,8 @@ export function ascendLab(wiki){
             if (traits[trait].val >= 0){
                 trait_list = trait_list + `<div class="field t${trait}"><b-checkbox :disabled="allowed('${trait}')" :input="geneEdit()" v-model="g.traitlist" native-value="${trait}"><span class="has-text-success">${loc(`trait_${trait}_name`)}</span> (<span class="has-text-advanced">{{ '${trait}' | cost }}</span>)</b-checkbox></div>`;
             }
-            else {
-                negative = negative + `<div class="field t${trait}"><b-checkbox :disabled="allowed('${trait}')" :input="geneEdit()" v-model="g.traitlist" native-value="${trait}"><span class="has-text-danger">${loc(`trait_${trait}_name`)}</span> (<span class="has-text-caution">{{ '${trait}' | cost }}</span>)</b-checkbox></div>`;
+            else {(
+                negative = negative + `<div class="field t${trait}"><b-checkbox :disabled="allowed('${trait}')" :input="geneEdit()" v-model="g.traitlist" native-value="${trait}"><span class="has-text-danger">${loc(`trait_${trait}_name`)}</span> (<span class="has-text-caution">{{ '${trait}' | cost }}</span>)</b-checkbox></div>`);
             }
         }
     });
@@ -6939,7 +6939,7 @@ export function terraformLab(wiki){
 
     let planet = {
         biome: dBiome,
-        pts: 0,
+        pts: 100000,
         traitlist: [],
         geology: geology,
         orbit: global.city.calendar.orbit,
